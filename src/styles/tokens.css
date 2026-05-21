@@ -1,0 +1,16 @@
+:root {
+  --background: #ffffff;
+  --foreground: #0c1222;
+  --primary: #0c1222;
+  --primary-foreground: #ffffff;
+  --accent: #f26522;
+  --accent-hover: #e05515;
+  --accent-foreground: #ffffff;
+  --muted: #64748b;
+  --muted-light: #94a3b8;
+  --border: #e2e8f0;
+  --surface: #f4f6f9;
+  --dark: #060a14;
+  --dark-surface: #0f1629;
+  --dark-border: rgba(255, 255, 255, 0.08);
+}

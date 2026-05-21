@@ -1,0 +1,12 @@
+export { HeroSection } from "./hero";
+export { TrustBarSection } from "./trust-bar";
+export { BusinessModelSection } from "./business-model";
+export { ServicesGridSection } from "./services-grid";
+export { IndustriesSection } from "./industries";
+export { EngagementModelsSection } from "./engagement-models";
+export { LeadershipBannerSection } from "./leadership-banner";
+export { TechPartnersSection } from "./tech-partners";
+export { TechStackSection } from "./tech-stack";
+export { TestimonialsSection } from "./testimonials";
+export { CertificationsSection } from "./certifications";
+export { CtaBannerSection } from "./cta-banner";
