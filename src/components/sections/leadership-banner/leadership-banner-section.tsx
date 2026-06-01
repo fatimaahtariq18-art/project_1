@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/shared";
-
+import { MdArrowOutward } from "react-icons/md";
 type LeadershipMember = {
   name: string;
   role: string;
@@ -46,6 +46,7 @@ export function LeadershipBannerSection({
           <div className="mt-8">
             <Button href={cta.href} size="lg">
               {cta.label}
+              <MdArrowOutward className="h-7 w-5 transition group-hover:rotate-45 duration-300" />
             </Button>
           </div>
         </ScrollReveal>
@@ -63,12 +64,6 @@ export function LeadershipBannerSection({
             </StaggerItem>
           ))}
         </StaggerContainer>
-
-        <ScrollReveal className="mt-10 text-center">
-          <Button href={cta.href} variant="outline" size="lg">
-            {cta.label}
-          </Button>
-        </ScrollReveal>
       </Container>
     </section>
   );

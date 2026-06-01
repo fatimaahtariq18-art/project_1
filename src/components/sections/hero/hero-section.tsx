@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { ScrollReveal } from "@/components/shared";
+import { MdArrowOutward } from "react-icons/md";
 
 type HeroSectionProps = {
   eyebrow: string;
@@ -66,9 +67,10 @@ export function HeroSection({
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="mt-10">
+          <div className="mt-10 group">
             <Button href={cta.href} size="lg">
               {cta.label}
+             <MdArrowOutward className="h-7 w-5 transition group-hover:rotate-45 duration-300" />
             </Button>
           </div>
         </ScrollReveal>

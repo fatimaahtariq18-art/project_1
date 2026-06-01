@@ -9,6 +9,7 @@ import { ScrollReveal } from "@/components/shared";
 import { ROUTES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import type { EngagementModel } from "@/types";
+import { MdArrowOutward } from "react-icons/md";
 
 type EngagementModelsSectionProps = {
   models: EngagementModel[];
@@ -135,6 +136,7 @@ export function EngagementModelsSection({
               <div className="mt-8">
                 <Button href={ROUTES.contact} variant="primary">
                   Learn More
+                  <MdArrowOutward className="h-7 w-5 transition group-hover:rotate-45 duration-300" />
                 </Button>
               </div>
             </motion.div>

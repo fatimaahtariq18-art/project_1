@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Section } from "@/components/ui/section";
 import { Heading } from "@/components/ui/heading";
 import { ScrollReveal } from "@/components/shared";
+import {getTechIcon} from "@/lib/tech-icons";
 import { cn } from "@/lib/utils";
 import type { TechCategory, TechItem } from "@/types";
 
@@ -44,7 +45,7 @@ export function TechStackSection({ categories, items }: TechStackSectionProps) {
                   ? "bg-accent text-accent-foreground shadow-lg shadow-accent/20"
                   : "bg-surface text-muted hover:text-foreground",
               )}
-            >
+            > 
               {category.label}
             </button>
           ))}
@@ -68,8 +69,8 @@ export function TechStackSection({ categories, items }: TechStackSectionProps) {
               transition={{ delay: i * 0.03, duration: 0.3 }}
               className="group flex flex-col items-center rounded-2xl border border-border bg-surface p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-background text-lg font-bold text-accent transition-transform duration-300 group-hover:scale-110">
-                {item.name.charAt(0)}
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-background text-lg text-accent transition-transform duration-300 group-hover:scale-110">
+                {getTechIcon(item.icon)}
               </div>
               <p className="mt-3 text-sm font-medium">{item.name}</p>
             </motion.div>

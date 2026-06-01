@@ -8,7 +8,7 @@ import { ROUTES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import type { NavItem } from "@/types";
-
+import { MdArrowOutward } from "react-icons/md";
 function NavDropdown({ item }: { item: NavItem }) {
   const [open, setOpen] = useState(false);
 
@@ -22,7 +22,6 @@ function NavDropdown({ item }: { item: NavItem }) {
       </Link>
     );
   }
-
   return (
     <div
       className="relative"
@@ -31,7 +30,7 @@ function NavDropdown({ item }: { item: NavItem }) {
     >
       <button
         type="button"
-        className="flex items-center gap-1 text-sm font-medium text-white/80 transition-colors hover:text-white"
+        className="flex items-center gap-1 text-sm font-medium text-white/80 transition-colors cursor-pointer hover:text-white hover:border-b hover:border-orange-500"
       >
         {item.label}
         <svg
@@ -61,8 +60,9 @@ function NavDropdown({ item }: { item: NavItem }) {
           <Link
             key={child.href + child.label}
             href={child.href}
-            className="block rounded-lg px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-white"
+            className="block rounded-lg px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-white flex gap-3"
           >
+          <child.icon className="mt-1"/>
             {child.label}
           </Link>
         ))}
@@ -100,7 +100,7 @@ export function MobileMenu() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white hover:bg-white/5"
+                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white hover:bg-white/5 "
                 >
                   {item.label}
                 </Link>
@@ -164,8 +164,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button href={ROUTES.contact} size="sm" className="hidden sm:inline-flex">
+          <Button href={ROUTES.contact} size="sm" className=" group hidden sm:inline-flex">
             Contact Us
+            <MdArrowOutward className="h-7 w-5 transition group-hover:rotate-45 duration-300" />
           </Button>
           <MobileMenu />
         </div>

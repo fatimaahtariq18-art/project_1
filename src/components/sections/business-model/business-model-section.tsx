@@ -6,6 +6,7 @@ import { Heading } from "@/components/ui/heading";
 import { Carousel, CarouselSlide, ScrollReveal } from "@/components/shared";
 import { ROUTES } from "@/lib/constants";
 import type { BusinessSegment } from "@/types";
+import { MdArrowOutward } from "react-icons/md";
 
 type BusinessModelSectionProps = {
   segments: BusinessSegment[];
@@ -53,9 +54,10 @@ export function BusinessModelSection({ segments }: BusinessModelSectionProps) {
         </Carousel>
       </div>
 
-      <ScrollReveal className="mt-10 text-center">
+      <ScrollReveal className="mt-10 text-center group">
         <Button href={ROUTES.contact} variant="primary">
           Let&apos;s Discuss Your Need
+          <MdArrowOutward className="h-7 w-5 transition group-hover:rotate-45 duration-300" />
         </Button>
       </ScrollReveal>
     </Section>

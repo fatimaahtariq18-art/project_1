@@ -1,6 +1,9 @@
+import { IconType } from "react-icons/lib";
+
 export type NavItem = {
   label: string;
   href: string;
+  icon:IconType;
   children?: NavItem[];
 };
 
@@ -42,6 +45,7 @@ export type TechCategory = {
 export type TechItem = {
   name: string;
   category: string;
+  icon:string;
 };
 
 export type TeamMember = {
